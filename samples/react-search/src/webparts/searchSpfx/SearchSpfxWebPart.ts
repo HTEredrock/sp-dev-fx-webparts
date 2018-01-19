@@ -251,7 +251,7 @@ export default class SearchSpfxWebPart extends BaseClientSideWebPart<ISearchSpfx
 				}, {
 					groupName: strings.LoggingGroupName,
 					groupFields: [
-						PropertyPaneLoggingField({
+						PropertyPaneLoggingField('loggin', {
 							label: strings.LoggingFieldLabel,
 							description: strings.LoggingFieldDescription,
 							value: searchStore.getLoggingInfo(),
