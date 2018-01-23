@@ -6,6 +6,8 @@
         width: 234px;
         height: 271px;
         margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
     }
     .thumbImgContainer {
         border-bottom: 1px solid #eaeaea;
@@ -14,13 +16,75 @@
         height: calc(100% - 140px);
         overflow: hidden;
     }
-    .siteLink {
-        padding: 12px 16px 5px 16px;
+    .profileContainer {
+        height: 32px;
+    }
+    .profileThumbContainer {
+        width: 32px;
+        height: 32px; // overflow: hidden;
+        padding: 27px 22px;
+        margin-left: 12px;
+    }
+    .profileThumbImg {
+        max-width: 32px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .authorContainer {
+        height: 32px;
+        top: 212px;
+        left: 60px;
+        width: calc(100% - 72px);
+        padding: 10px 0px;
+        position: absolute;
+        color: #333;
+        font-family: Segoe UI Regular WestEuropean, Segoe UI, Tahoma, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        list-style-type: none;
+    }
+    .author {
+        color: #333333;
+        font-weight: 600;
+        display: block;
+        font-size: 12px;
+        line-height: 15px;
+        height: 15px;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
     }
-    .title {
+    .authorSubtext {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        color: #767676;
+        line-height: 15px;
+        height: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .siteLink {
+        font-size: 12px;
+        font-weight: 400;
+        color: #333333;
+        display: block;
+        position: relative;
+        text-decoration: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 12px 16px 5px 16px;
+    }
+    .titleArea {
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .titleText {
+        margin-top: 0px;
         padding: 8px 16px;
+        padding-top: 0px;
         display: block;
         font-size: 17px;
         font-weight: 350;

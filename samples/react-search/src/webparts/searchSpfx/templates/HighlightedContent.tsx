@@ -37,16 +37,37 @@ export default class HighlightedContentTemplate extends React.Component<IHighlig
         return (
             <div className={styles.searchSpfx}>
                 <div className={styles.searchSpfx}>
-                    <h1 className='ms-font-xxl'>Search results for query: {this.props.query}</h1>
                     {
                         this.props.results.map((result, index) => {
                             return (
                                 <div className={styles.container}>
-                                    <div className={styles.thumbImgContainer}><img src={this.getThumbnailImage(result.SPWebUrl, result.SiteID, result.WebId, result.UniqueID)}/></div>
+                                    <div className={styles.thumbImgContainer}><img src={this.getThumbnailImage(result.SPWebUrl, result.SiteID, result.WebId, result.UniqueID)} /></div>
                                     <div>
-                                        <div><a className={styles.siteLink} href={result.SPWebUrl} target='_blank'>{result.SiteTitle}</a></div>
-                                        <div className={styles.title}>{result.Title}</div>
-                                        <div><img src="/_layouts/15/userphoto.aspx?size=S&accountname=peter-ross@greenlightsolutions.co.za" alt="Profile picture"/>{this.getAuthorDisplayName(result.EditorOWSUSER)}</div>
+                                        <a className={styles.siteLink} href={result.SPWebUrl} target='_blank'>
+                                            {result.SiteTitle}
+                                        </a>
+                                        <div className={styles.titleArea}>
+                                            <div className={styles.titleText}>
+                                                {result.Title}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <div className={styles.profileContainer}>
+                                                    <div className={styles.profileThumbContainer}>
+                                                        <img className={styles.profileThumbImg} src="/_layouts/15/userphoto.aspx?size=S&accountname=peter-ross@greenlightsolutions.co.za" alt="Profile picture" />
+                                                    </div>
+                                                    <div className={styles.authorContainer}>
+                                                        <span className={styles.author}>
+                                                            {this.getAuthorDisplayName(result.EditorOWSUSER)}
+                                                        </span>
+                                                        <span className={styles.authorSubtext}>
+                                                            Edited on date
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             );
