@@ -2,7 +2,8 @@ import { ITemplates } from '../utils/ITemplates';
 
 export const allTemplates: ITemplates[] = [
     { key: 'DefaultTemplate', text: 'Default template', mappings: 'Path,Title' },
-    { key: 'TableTemplate', text: 'Table template', mappings: 'Path,Title,Filename,Fileextension,ModifiedOWSDATE,EditorOWSUSER' }
+    { key: 'TableTemplate', text: 'Table template', mappings: 'Path,Title,Filename,Fileextension,ModifiedOWSDATE,EditorOWSUSER' },
+    { key: 'HighlightedContent', text: 'Highlighted Content', mappings: 'Path,Title,Filename,Fileextension,ModifiedOWSDATE,EditorOWSUSER,PictureThumbnailURL,SPWebUrl,SiteTitle,BannerImageUrlOWSURLH,SiteID,WebId,ListID,UniqueID' }
 ];
 
 export default class TemplateLoader {
@@ -15,7 +16,7 @@ export default class TemplateLoader {
 
     public getTemplateMappings(templateToLoad: string): string {
         // Retrieve the fields for the current template
-		const fields: ITemplates[] = allTemplates.filter((t) => { if (t.key === templateToLoad) return true; });
-		return fields.length > 0 ? fields[0].mappings : "";
+        const fields: ITemplates[] = allTemplates.filter((t) => { if (t.key === templateToLoad) return true; });
+        return fields.length > 0 ? fields[0].mappings : "";
     }
 }
